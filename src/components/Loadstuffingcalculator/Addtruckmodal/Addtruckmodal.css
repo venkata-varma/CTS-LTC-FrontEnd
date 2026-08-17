@@ -1,0 +1,244 @@
+.addtruck-body {
+  padding: 8px 0;
+}
+
+.addtruck-body h3 {
+  margin-bottom: 8px;
+  font-size: 22px;
+  color: #1e293b;
+}
+
+.addtruck-body p {
+  color: #64748b;
+  margin-bottom: 28px;
+}
+
+/* ==========================
+   DETAILS VIEW
+========================== */
+
+.truck-details-view {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Back Button ---------- */
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  width: max-content;
+
+  padding: 8px 12px;
+
+  margin-bottom: 26px;
+
+  background: #ffffff;
+
+  border: 2px solid #dbe3ef;
+  border-radius: 8px;
+
+  color: #2563eb;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background: #eff6ff;
+  border-color: #2563eb;
+  color: #1d4ed8;
+}
+
+.back-button:active {
+  transform: scale(0.97);
+}
+
+.back-button:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+/* ==========================
+   LEFT + RIGHT LAYOUT
+========================== */
+
+.truck-details-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+/* ==========================
+   LEFT SIDE
+========================== */
+
+.truck-details-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.truck-details-nav-button {
+  width: 100%;
+
+  padding: 10px 14px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+
+  text-align: left;
+
+  color: #334155;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.truck-details-nav-button:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.truck-details-nav-button.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* ==========================
+   RIGHT SIDE
+========================== */
+
+.truck-details-main {
+  width: 100%;
+}
+
+.details-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.details-image {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.details-image img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.details-content {
+  flex: 1;
+}
+
+.truck-name-styling {
+   margin-bottom: 24px;
+
+  color:blue !important;
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+/* ==========================
+   SPECIFICATIONS
+========================== */
+
+.truck-specifications {
+  margin-bottom: 28px;
+}
+
+.truck-specifications h3,
+.truck-description h3 {
+  margin-bottom: 14px;
+
+  color: #1e293b;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+.specifications-grid {
+  display: flex;
+  flex-direction: column;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.specification-row {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+
+  align-items: center;
+
+  padding: 7px 0;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.specification-label {
+  font-weight: 600;
+  color: #334155;
+}
+
+.specification-value {
+  color: #475569;
+}
+
+/* ==========================
+   DESCRIPTION
+========================== */
+
+.truck-description p {
+  margin-bottom: 12px;
+
+  color: #64748b;
+
+  line-height: 1.65;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 900px) {
+  .truck-details-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .truck-details-sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .details-layout {
+    flex-direction: column;
+  }
+
+  .details-image {
+    width: 180px;
+  }
+
+  .specification-row {
+    grid-template-columns: 140px 1fr;
+  }
+}

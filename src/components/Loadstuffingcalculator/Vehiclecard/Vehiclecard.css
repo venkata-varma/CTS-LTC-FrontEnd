@@ -1,0 +1,276 @@
+.vehicle-card {
+  margin-top: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe3ef;
+
+  border-radius: 14px;
+
+  padding: 18px 22px;
+
+  transition: 0.2s ease;
+}
+
+.vehicle-card:hover {
+  border-color: #3b82f6;
+
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.08);
+}
+
+.vehicle-card-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.vehicle-card-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.vehicle-card-title h3 {
+  margin: 0;
+
+  font-size: 18px;
+
+  color: #1e293b;
+}
+
+.vehicle-type-badge {
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  padding: 4px 10px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-transform: capitalize;
+}
+
+.vehicle-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vehicle-card-actions button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.edit-button {
+  background: #e8f1ff;
+}
+
+.edit-button:hover {
+  background: #d6e8ff;
+  transform: translateY(-1px);
+}
+
+.delete-button {
+  background: #ffeaea;
+}
+
+.delete-button:hover {
+  background: #ffd5d5;
+  transform: translateY(-1px);
+}
+
+.vehicle-card-actions button:active {
+  transform: scale(0.94);
+}
+
+.vehicle-card-body {
+  display: flex;
+
+  gap: 24px;
+
+  margin-top: 18px;
+
+  align-items: center;
+}
+.vehicle-image {
+  width: 170px;
+
+  height: 110px;
+
+  border: 1px dashed #dbe3ef;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #f8fafc;
+}
+
+.vehicle-image img {
+  width: 90%;
+
+  height: 90%;
+
+  object-fit: contain;
+}
+
+.vehicle-specifications {
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 16px;
+}
+
+.vehicle-specification {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.vehicle-specification span {
+  font-size: 15px;
+
+  color: #64748b;
+}
+
+.vehicle-specification strong {
+  font-size: 14px;
+
+  color: #1e293b;
+}
+
+.vehicle-card-footer {
+  margin-top: 18px;
+
+  padding-top: 14px;
+
+  border-top: 1px solid #edf2f7;
+
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.vehicle-count {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.vehicle-count span {
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+.vehicle-count strong {
+  min-width: 34px;
+
+  text-align: center;
+
+  padding: 4px 10px;
+
+  border-radius: 8px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+}
+
+
+/* ==========================================
+   Truck Axle Load
+========================================== */
+
+.vehicle-axle-load {
+  width: 190px;
+  flex-shrink: 0;
+
+  padding: 10px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+
+  background: #f8fafc;
+}
+
+.axle-load-title {
+  margin-bottom: 8px;
+
+  text-align: center;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #475569;
+}
+
+.axle-load-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 7px;
+}
+
+.axle-load-item {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 6px 7px;
+
+  border: 1px solid #dbe3ef;
+  border-radius: 7px;
+
+  background: #ffffff;
+}
+
+.axle-load-item span {
+  font-size: 11px;
+  font-weight: 600;
+
+  color: #64748b;
+}
+
+.axle-load-item strong {
+  font-size: 12px;
+
+  color: #1e293b;
+}
+
+.axle-load-item small {
+  margin-left: auto;
+
+  font-size: 10px;
+
+  color: #94a3b8;
+}

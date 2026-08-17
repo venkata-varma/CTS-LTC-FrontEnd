@@ -1,0 +1,23 @@
+.producttype-icon img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+.producttype-name{
+    margin-top:14px;
+}
+
+.edit-product-warning {
+  margin-bottom: 18px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #facc15;
+  border-radius: 8px;
+
+  background: #fffbeb;
+  color: #92400e;
+
+  font-size: 13px;
+  line-height: 1.5;
+}

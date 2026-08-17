@@ -1,0 +1,29 @@
+.productpreview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.productpreview-image {
+  width: 100%;
+  max-width: 260px;
+  max-height: 260px;
+
+  object-fit: contain;
+}
+
+.productpreview-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 260px;
+
+  color: #94a3b8;
+
+  font-size: 15px;
+}

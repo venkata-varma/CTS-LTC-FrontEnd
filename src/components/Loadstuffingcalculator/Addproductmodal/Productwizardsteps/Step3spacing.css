@@ -1,0 +1,103 @@
+.step3-spacing {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.spacing-heading h3 {
+  margin-bottom: 6px;
+  color: #1e293b;
+}
+
+.spacing-heading p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.spacing-options,
+.placement-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.spacing-option-card,
+.placement-option-card {
+  padding: 16px;
+
+  border: 1px solid #dbe3ef;
+  border-radius: 10px;
+
+  background: #ffffff;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.spacing-option-card:hover,
+.placement-option-card:hover {
+  border-color: #2563eb;
+}
+
+.spacing-option-card img,
+.placement-option-card img {
+  width: 100%;
+  height: 130px;
+
+  margin-top: 14px;
+
+  object-fit: contain;
+}
+
+.spacing-option-header {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.spacing-option-card.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.spacing-option-card.disabled:hover {
+  border-color: #dbe3ef;
+}
+
+.placement-section {
+  padding-top: 22px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.placement-section h4 {
+  margin-bottom: 16px;
+  color: #1e293b;
+}
+
+.placement-option-card.selected {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.placement-radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-top: 12px;
+
+  color: #334155;
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .spacing-options,
+  .placement-options {
+    grid-template-columns: 1fr;
+  }
+}

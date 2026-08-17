@@ -1,0 +1,74 @@
+.table-toolbar{
+
+    padding:22px 24px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    border-bottom:1px solid #edf2f7;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+
+  width: 420px;
+
+  background: #f8fafc;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 10px;
+
+  padding: 0 14px;
+}
+
+.search-icon {
+  color: #6b7280;
+
+  font-size: 1.1rem;
+}
+
+.search-box input {
+  flex: 1;
+
+  padding: 12px;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  font-size: 0.95rem;
+}
+
+.record-count {
+  color: #4b5563;
+
+  font-size: 0.95rem;
+}
+.active-filters{
+
+    padding:14px 24px;
+
+    border-bottom:1px solid #edf2f7;
+
+    background:#fafcff;
+}
+.filter-badge {
+  background: #ef4444;
+
+  color: white;
+
+  padding: 6px 14px;
+
+  border-radius: 20px;
+
+  font-size: 0.82rem;
+
+  font-weight: 500;
+}

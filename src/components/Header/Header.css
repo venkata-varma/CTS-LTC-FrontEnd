@@ -1,0 +1,90 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  width: 100%;
+  min-height: 240px;
+
+  padding: 40px 50px;
+
+  background: linear-gradient(135deg, #f8fbff 0%, #edf4ff 100%);
+
+  border-radius: 18px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  margin-bottom: 30px;
+
+  overflow: hidden;
+}
+
+.header__icon {
+  width: 140px;
+  height: 140px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #2563eb, #4f8dfd);
+
+  color: white;
+
+  font-size: 4rem;
+
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.35);
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header__content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #1e3a8a;
+    margin-bottom: 12px;
+}
+
+.header__content p {
+    font-size: 1.38rem;
+    color: #5f6b7a;
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+.add-cheque-btn {
+  width: fit-content;
+
+  padding: 14px 28px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+.add-cheque-btn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+}

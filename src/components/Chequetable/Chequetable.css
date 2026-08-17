@@ -1,0 +1,307 @@
+.table-wrapper {
+  min-height: 790px;
+
+  overflow-x: auto;
+  overflow-y: auto;
+}
+/* ===========================
+   TABLE
+=========================== */
+
+.cheque-table {
+  width: 100%;
+  min-width: 1550px;
+  border-collapse: collapse;
+}
+
+.cheque-table thead {
+  background: #f1f5f9;
+}
+
+.cheque-table th,
+.cheque-table td {
+  padding: 22px 18px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.cheque-table th {
+  color: #334155;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+
+  background: #f1f5f9;
+
+  border-bottom: 2px solid #dbe4ee;
+
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.cheque-table th:hover {
+  background: #e8eef7;
+}
+
+.cheque-table td {
+  font-size: 15px;
+  color: #334155;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.cheque-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.cheque-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.cheque-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===========================
+   TABLE HEADINGS
+=========================== */
+
+.table-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  user-select: none;
+
+  transition: color 0.2s ease;
+}
+
+.table-heading:hover {
+  color: #2563eb;
+}
+
+.sort-icon {
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.sort-icon.active {
+  color: #2563eb;
+}
+
+.sort-icon.inactive {
+  color: #cbd5e1;
+}
+
+.table-heading:hover .sort-icon.inactive {
+  color: #64748b;
+}
+
+/* ===========================
+   IMPORTANT CELLS
+=========================== */
+
+.cheque-number {
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.account-holder {
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.amount-cell {
+  color: #1e3a8a;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ===========================
+   STATUS BADGE
+=========================== */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 15px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+
+.status-badge.received {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-badge.submitted {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status-badge.cleared {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-badge.returned,
+.status-badge.bounced {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.status-badge.cancelled {
+  background: #e5e7eb;
+  color: #475569;
+}
+
+.status-badge.pending-submission {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+/* ===========================
+   ATTACHMENT
+=========================== */
+
+.attachment {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.attachment.available {
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.attachment.available:hover {
+  text-decoration: underline;
+}
+
+.attachment.unavailable {
+  color: #94a3b8;
+}
+
+.attachment-icon {
+  font-size: 15px;
+}
+
+/* ===========================
+   ACTION BUTTONS
+=========================== */
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 9px 13px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.action-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.edit-btn {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.upload-btn {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.reschedule-btn {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+/* ===========================
+   COLUMN WIDTHS
+=========================== */
+
+.cheque-table th:nth-child(1) {
+  width: 140px;
+}
+
+.cheque-table th:nth-child(2) {
+  width: 250px;
+}
+
+.cheque-table th:nth-child(3) {
+  width: 150px;
+}
+
+.cheque-table th:nth-child(4) {
+  width: 130px;
+}
+
+.cheque-table th:nth-child(5) {
+  width: 140px;
+}
+
+.cheque-table th:nth-child(6) {
+  width: 180px;
+}
+
+.cheque-table th:nth-child(7),
+.cheque-table th:nth-child(8),
+.cheque-table th:nth-child(9) {
+  width: 140px;
+}
+
+.cheque-table th:nth-child(10) {
+  width: 170px;
+}
+
+.cheque-table th:nth-child(11) {
+  width: 290px;
+}.no-records-cell {
+  height: 500px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.clickable-cheque-row {
+  cursor: pointer;
+}

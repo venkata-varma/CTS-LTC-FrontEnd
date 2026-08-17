@@ -1,0 +1,68 @@
+.reactivate-confirmation {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.reactivate-confirmation p {
+  margin: 0;
+
+  color: #475569;
+
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.reactivate-confirmation strong {
+  color: #1e293b;
+}
+
+.reactivate-confirmation-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+
+  margin-top: 12px;
+}
+
+.reactivate-cancel-button,
+.reactivate-confirm-button {
+  padding: 10px 17px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.reactivate-cancel-button {
+  border: 1px solid #cbd5e1;
+
+  background: #ffffff;
+  color: #475569;
+}
+
+.reactivate-cancel-button:hover:not(:disabled) {
+  background: #f1f5f9;
+}
+
+.reactivate-confirm-button {
+  border: 1px solid #2563eb;
+
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.reactivate-confirm-button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.reactivate-cancel-button:disabled,
+.reactivate-confirm-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

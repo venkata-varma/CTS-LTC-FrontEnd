@@ -1,0 +1,300 @@
+.analytics-wrapper {
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  padding: 24px;
+
+  margin-bottom: 28px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+}
+
+/* ============================= */
+
+.analytics-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-bottom: 24px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #edf2f7;
+}
+
+.analytics-header h2 {
+  margin: 0;
+
+  font-size: 30px;
+
+  font-weight: 800;
+
+  color: #4374e7;
+
+  letter-spacing: 0.3px;
+}
+
+.analytics-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 6px 14px;
+
+  background: #a5a5f8;
+
+  color: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+  gap:6px;
+}
+.analytics-badge svg {
+  font-size: 17px;
+}
+/* ============================= */
+
+.analytics-container {
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 18px;
+}
+
+/* ============================= */
+
+.analytics-card {
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #f8fbff
+  );
+
+  border: 1px solid #e8eef7;
+
+  border-radius: 14px;
+
+  padding: 20px 18px;
+
+  min-height: 130px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  transition: all 0.25s ease;
+}
+
+.analytics-card:hover {
+  transform: translateY(-4px);
+
+}
+
+/* ============================= */
+
+.analytics-card-top {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.analytics-icon {
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 20px;
+
+  flex-shrink: 0;
+}
+
+/* ============================= */
+
+.analytics-title {
+  color: #334155;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  line-height: 1.45;
+
+  letter-spacing: 0.2px;
+}
+
+.analytics-card h2 {
+  margin: 18px 0 0;
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  color: #1d4ed8;
+
+  line-height: 1;
+}
+
+/* ============================= */
+/* Total */
+/* ============================= */
+
+.analytics-card.total {
+  background: #f8fbff;
+}
+
+.analytics-card.total .analytics-icon {
+  background: #dbeafe;
+
+  color: #2563eb;
+}
+
+/* ============================= */
+/* Submitted */
+/* ============================= */
+
+.analytics-card.submitted {
+  background: #faf7ff;
+}
+
+.analytics-card.submitted .analytics-icon {
+  background: #ede9fe;
+
+  color: #7c3aed;
+}
+
+/* ============================= */
+/* Pending */
+/* ============================= */
+
+.analytics-card.pending {
+  background: #fffdf7;
+}
+
+.analytics-card.pending .analytics-icon {
+  background: #fef3c7;
+
+  color: #ca8a04;
+}
+
+/* ============================= */
+/* Cleared */
+/* ============================= */
+
+.analytics-card.cleared {
+  background: #f6fffa;
+}
+
+.analytics-card.cleared .analytics-icon {
+  background: #dcfce7;
+
+  color: #16a34a;
+}
+
+/* ============================= */
+/* Returned / Bounced */
+/* ============================= */
+
+.analytics-card.bounced {
+  background: #fff8f8;
+}
+
+.analytics-card.bounced .analytics-icon {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+/* ============================= */
+/* Multiple Cheques */
+/* ============================= */
+
+.analytics-card.multiple {
+  background: #f8fbff;
+}
+
+.analytics-card.multiple .analytics-icon {
+  background: #e0f2fe;
+
+  color: #0284c7;
+}
+
+
+
+
+/* ============================= */
+/* Total */
+/* ============================= */
+
+.analytics-card.total:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.15);
+}
+
+/* ============================= */
+/* Submitted */
+/* ============================= */
+
+.analytics-card.submitted:hover {
+  border-color: #c4b5fd;
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.15);
+}
+
+/* ============================= */
+/* Pending */
+/* ============================= */
+
+.analytics-card.pending:hover {
+  border-color: #fcd34d;
+  box-shadow: 0 10px 24px rgba(202, 138, 4, 0.15);
+}
+
+/* ============================= */
+/* Cleared */
+/* ============================= */
+
+.analytics-card.cleared:hover {
+  border-color: #86efac;
+  box-shadow: 0 10px 24px rgba(22, 163, 74, 0.15);
+}
+
+/* ============================= */
+/* Returned / Bounced */
+/* ============================= */
+
+.analytics-card.bounced:hover {
+  border-color: #fca5a5;
+  box-shadow: 0 10px 24px rgba(220, 38, 38, 0.15);
+}
+
+/* ============================= */
+/* Multiple */
+/* ============================= */
+
+.analytics-card.multiple:hover {
+  border-color: #7dd3fc;
+  box-shadow: 0 10px 24px rgba(2, 132, 199, 0.15);
+}
