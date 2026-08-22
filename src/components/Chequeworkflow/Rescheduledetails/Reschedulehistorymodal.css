@@ -1,0 +1,262 @@
+/* Full-screen dark background */
+.reschedule-history-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(15, 23, 42, 0.48);
+}
+
+/* Main modal */
+.reschedule-history-modal {
+  width: 100%;
+  max-width: 620px;
+  max-height: 78vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  border-radius: 14px;
+
+  box-shadow:
+    0 20px 25px rgba(15, 23, 42, 0.12),
+    0 8px 10px rgba(15, 23, 42, 0.08);
+
+  overflow: hidden;
+}
+
+/* Header */
+.reschedule-history-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 20px 22px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.reschedule-history-modal-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+.reschedule-history-modal-header p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+
+  color: #64748b;
+}
+
+/* Close button */
+.reschedule-history-close-btn {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #f1f5f9;
+  color: #475569;
+
+  font-size: 19px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.reschedule-history-close-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+/* Scrollable history area */
+.reschedule-history-modal-body {
+  flex: 1;
+  min-height: 0;
+
+  padding: 20px 22px;
+
+  overflow-y: auto;
+}
+
+/* Individual history entry */
+.reschedule-history-item {
+  padding: 17px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  background: #f8fafc;
+}
+
+.reschedule-history-item + .reschedule-history-item {
+  margin-top: 16px;
+}
+
+/* Date + current badge */
+.reschedule-history-item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-bottom: 14px;
+}
+
+.reschedule-history-date {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #2563eb;
+}
+
+.reschedule-history-date svg {
+  font-size: 16px;
+}
+
+.reschedule-history-date strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Current badge */
+.current-reschedule-badge {
+  padding: 4px 9px;
+
+  border-radius: 999px;
+
+  background: #dcfce7;
+  color: #15803d;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+/* Reason */
+.reschedule-history-reason {
+  padding: 12px 14px;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.reschedule-history-reason span {
+  display: block;
+  margin-bottom: 6px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #64748b;
+}
+
+.reschedule-history-reason p {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  color: #334155;
+}
+
+/* Performed by + timestamp */
+.reschedule-history-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin-top: 12px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  color: #64748b;
+}
+
+.reschedule-history-meta > div {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.reschedule-history-meta strong {
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #334155;
+}
+.reschedule-history-meta > span {
+  color: #475569;
+  font-weight: 600;
+}
+
+/* Scrollbar */
+.reschedule-history-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.reschedule-history-modal-body::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.reschedule-history-modal-body::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.reschedule-history-modal-body::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Smaller screens */
+@media (max-width: 650px) {
+  .reschedule-history-overlay {
+    padding: 14px;
+  }
+
+  .reschedule-history-modal {
+    max-height: 85vh;
+  }
+
+  .reschedule-history-meta {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 7px;
+  }
+}

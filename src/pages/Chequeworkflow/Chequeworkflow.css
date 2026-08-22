@@ -1,0 +1,274 @@
+.cheque-workflow-page {
+  min-height: 100vh;
+  padding: 28px 32px 50px;
+  background: #eef3f8;
+}
+
+.workflow-page-heading {
+  margin-bottom: 22px;
+}
+
+.workflow-page-heading h1 {
+  color: #1e293b;
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.workflow-page-heading p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* =========================
+   CHEQUE SUMMARY
+========================= */
+
+.cheque-summary-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+.cheque-summary-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.summary-label {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.cheque-summary-top h2 {
+  color: #1e293b;
+  font-size: 25px;
+}
+
+.workflow-status-badge {
+  padding: 7px 14px;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-transform: capitalize;
+
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.workflow-status-badge.received {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.workflow-status-badge.pending-submission {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.workflow-status-badge.submitted {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.workflow-status-badge.cleared {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.workflow-status-badge.bounced,
+.workflow-status-badge.returned {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* =========================
+   DETAILS
+========================= */
+
+.cheque-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px 28px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summary-item span {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.summary-item strong {
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cheque-summary-footer {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.cheque-summary-footer a {
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cheque-summary-footer a:hover {
+  text-decoration: underline;
+}
+
+.cheque-workflow-loading,
+.cheque-workflow-error {
+  padding: 40px;
+  font-size: 16px;
+}
+
+.cheque-workflow-error {
+  color: #dc2626;
+}
+
+@media (max-width: 1100px) {
+  .cheque-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .cheque-workflow-page {
+    padding: 20px 16px 40px;
+  }
+
+  .cheque-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.workflow-management-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr 1fr;
+  gap: 20px;
+
+  height: 560px;
+
+  margin-top: 24px;
+
+  align-items: stretch;
+}
+
+.workflow-side-column {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  min-height: 0;
+}
+
+.workflow-side-column > * {
+  flex: 1;
+  min-height: 0;
+}
+.workflow-section-card,
+.workflow-activity-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+.workflow-section-card {
+  min-height: 190px;
+  padding: 20px;
+}
+
+.workflow-section-card h3 {
+  color: #1e293b;
+  font-size: 17px;
+}
+
+.workflow-activity-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 22px;
+  overflow: hidden;
+}
+
+.workflow-activity-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.workflow-activity-header h2 {
+  color: #1e293b;
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+.workflow-activity-header p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.activity-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 30px;
+  height: 30px;
+  padding: 0 9px;
+
+  border-radius: 999px;
+
+  background: #e0e7ff;
+  color: #4338ca;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media (max-width: 1050px) {
+  .workflow-management-layout {
+    grid-template-columns: 1fr;
+
+    height: auto;
+  }
+
+  .workflow-side-column {
+    grid-template-rows: auto;
+  }
+
+  .workflow-activity-card {
+    order: -1;
+
+    height: 520px;
+  }
+}

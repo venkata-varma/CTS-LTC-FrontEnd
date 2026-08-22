@@ -6,6 +6,9 @@ import groupReducer from './features/group/groupSlice'
 import productReducer from './features/product/productSlice'
 import vehicleReducer from './features/vehicle/vehicleSlice'
 import stuffingCalculationReducer from './features/stuffingCalculation/stuffingCalculationSlice'
+// NEW
+import chequeTrackingReducer from "./features/chequeTracking/chequeTrackingSlice";
+
 
 export const store = configureStore({
   reducer: {
@@ -14,6 +17,8 @@ export const store = configureStore({
     groupsApi:groupReducer,
     productsApi:productReducer,
     vehiclesApi:vehicleReducer,
-    stuffingCalculation:stuffingCalculationReducer
+    stuffingCalculation:stuffingCalculationReducer,
+    // NEW
+    chequeTracking: chequeTrackingReducer,
   },
 });

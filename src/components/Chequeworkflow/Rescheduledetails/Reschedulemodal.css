@@ -1,0 +1,310 @@
+.reschedule-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(15, 23, 42, 0.48);
+}
+
+.reschedule-modal {
+  width: 100%;
+  max-width: 600px;
+  max-height: 88vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  border-radius: 14px;
+
+  box-shadow:
+    0 20px 25px rgba(15, 23, 42, 0.12),
+    0 8px 10px rgba(15, 23, 42, 0.08);
+
+  overflow: hidden;
+}
+
+/* Header */
+
+.reschedule-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 20px 22px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.reschedule-modal-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+.reschedule-modal-header p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+
+  color: #64748b;
+}
+
+.reschedule-modal-close-btn {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #f1f5f9;
+  color: #475569;
+
+  font-size: 19px;
+
+  cursor: pointer;
+}
+
+.reschedule-modal-close-btn:hover:not(:disabled) {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+/* Form */
+
+.reschedule-modal-form {
+  padding: 22px;
+
+  overflow-y: auto;
+}
+
+/* Cheque summary */
+
+.reschedule-cheque-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 16px;
+
+  margin-bottom: 16px;
+}
+
+.reschedule-cheque-summary > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  padding: 12px 14px;
+
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.reschedule-cheque-summary span,
+.reschedule-current-info span {
+  font-size: 12px;
+  font-weight: 500;
+
+  color: #64748b;
+}
+
+.reschedule-cheque-summary strong {
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+/* Current date */
+
+.reschedule-current-info {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 20px;
+  padding: 12px 14px;
+
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+
+  color: #2563eb;
+}
+
+.reschedule-current-info svg {
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+.reschedule-current-info > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.reschedule-current-info strong {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+/* Fields */
+
+.reschedule-form-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  margin-bottom: 17px;
+}
+
+.reschedule-form-field label {
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #334155;
+}
+
+.reschedule-form-field label span {
+  color: #dc2626;
+}
+
+.reschedule-form-field input,
+.reschedule-form-field textarea {
+  width: 100%;
+
+  padding: 10px 12px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #ffffff;
+  color: #0f172a;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.reschedule-form-field textarea {
+  resize: vertical;
+  min-height: 95px;
+}
+
+.reschedule-form-field input:focus,
+.reschedule-form-field textarea:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.reschedule-form-field input:disabled,
+.reschedule-form-field textarea:disabled {
+  background: #f8fafc;
+  cursor: not-allowed;
+}
+
+/* Error */
+
+.reschedule-form-error {
+  margin-bottom: 16px;
+  padding: 10px 12px;
+
+  border: 1px solid #fecaca;
+  border-radius: 7px;
+
+  background: #fef2f2;
+  color: #b91c1c;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Actions */
+
+.reschedule-modal-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding-top: 4px;
+}
+
+.reschedule-cancel-btn,
+.reschedule-submit-btn {
+  padding: 9px 16px;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.reschedule-cancel-btn {
+  border: 1px solid #cbd5e1;
+
+  background: #ffffff;
+  color: #475569;
+}
+
+.reschedule-cancel-btn:hover:not(:disabled) {
+  background: #f8fafc;
+}
+
+.reschedule-submit-btn {
+  border: none;
+
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.reschedule-submit-btn:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.reschedule-cancel-btn:disabled,
+.reschedule-submit-btn:disabled,
+.reschedule-modal-close-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .reschedule-modal-overlay {
+    padding: 14px;
+  }
+
+  .reschedule-cheque-summary {
+    grid-template-columns: 1fr;
+  }
+}

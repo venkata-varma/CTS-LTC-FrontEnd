@@ -1,0 +1,161 @@
+.reschedule-details-card {
+  /* height: 100%;
+  min-height: 160px; */
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+
+  background: #ffffff;
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+/* Header */
+
+.reschedule-details-header {
+  margin-bottom: 16px;
+}
+
+.reschedule-details-header h3 {
+  margin: 0;
+  font-size: 16px;   /* was 14px */
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Current date */
+
+.reschedule-current-date {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px;
+  margin-bottom: 16px;
+
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+
+  background: #f8fbff;
+}
+
+.reschedule-current-date-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  background: #dbeafe;
+  color: #2563eb;
+
+  font-size: 17px;
+}
+
+.reschedule-current-date-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reschedule-current-date-content span,
+.reschedule-history-label {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.reschedule-current-date-content strong {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+/* History */
+
+.reschedule-history-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding-top: 12px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.reschedule-history-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reschedule-history-row strong {
+  font-size: 13px;
+  color: #334155;
+}
+
+.view-reschedule-history-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 6px 9px;
+
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.view-reschedule-history-btn:hover:not(:disabled) {
+  background: #dbeafe;
+}
+
+.view-reschedule-history-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Bottom action */
+
+.reschedule-details-footer {
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.reschedule-action-btn {
+  width: 100%;
+
+  padding: 8px 12px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.reschedule-action-btn:hover {
+  background: #1d4ed8;
+}
