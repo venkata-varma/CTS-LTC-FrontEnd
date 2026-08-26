@@ -1,0 +1,578 @@
+/* ========================================
+   OVERLAY
+======================================== */
+
+.bounce-summary-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.5);
+}
+
+
+/* ========================================
+   MODAL
+======================================== */
+
+.bounce-summary-modal {
+  width: min(94vw, 1250px);
+  max-height: 92vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 20px 50px
+    rgba(15, 23, 42, 0.22);
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.bounce-summary-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 18px 22px 16px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.bounce-summary-modal-header h2 {
+  margin: 0 0 4px;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+.bounce-summary-modal-header p {
+  margin: 0;
+
+  font-size: 13px;
+  color: #64748b;
+}
+
+.bounce-summary-close {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #f1f5f9;
+  color: #475569;
+
+  font-size: 17px;
+
+  cursor: pointer;
+}
+
+
+/* ========================================
+   CHEQUE SUMMARY
+======================================== */
+
+.bounce-summary-cheque-info {
+  display: grid;
+  grid-template-columns:
+    0.8fr 1.5fr 1fr 0.8fr;
+
+  gap: 18px;
+
+  padding: 13px 22px;
+
+  background: #f8fafc;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.bounce-summary-cheque-info > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  min-width: 0;
+}
+
+.bounce-summary-cheque-info span {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.bounce-summary-cheque-info strong {
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #0f172a;
+
+  overflow-wrap: anywhere;
+}
+
+.bounce-summary-current-status {
+  text-transform: capitalize;
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+.bounce-summary-body {
+  flex: 1;
+
+  padding: 18px 22px;
+
+  overflow-y: auto;
+}
+
+
+/* ========================================
+   TABLE WRAPPER
+======================================== */
+
+.bounce-summary-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border: 1px solid #dbe3ee;
+  border-radius: 9px;
+}
+
+
+/* ========================================
+   TABLE
+======================================== */
+
+.bounce-summary-table {
+  width: 100%;
+  min-width: 1080px;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.bounce-summary-table th {
+  padding: 11px 10px;
+
+  background: #f1f5f9;
+
+  border-bottom: 1px solid #cbd5e1;
+  border-right: 1px solid #e2e8f0;
+
+  text-align: left;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  color: #475569;
+
+  vertical-align: middle;
+}
+
+.bounce-summary-table th:last-child {
+  border-right: none;
+}
+
+.bounce-summary-table td {
+  padding: 12px 10px;
+
+  border-bottom: 1px solid #e2e8f0;
+  border-right: 1px solid #edf1f5;
+
+  vertical-align: top;
+
+  font-size: 12px;
+  line-height: 1.45;
+
+  color: #334155;
+
+  overflow-wrap: anywhere;
+}
+
+.bounce-summary-table td:last-child {
+  border-right: none;
+}
+
+.bounce-summary-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* ========================================
+   COLUMN WIDTHS
+======================================== */
+
+.bounce-summary-table th:nth-child(1) {
+  width: 110px;
+}
+
+.bounce-summary-table th:nth-child(2) {
+  width: 145px;
+}
+
+.bounce-summary-table th:nth-child(3) {
+  width: 95px;
+}
+
+.bounce-summary-table th:nth-child(4) {
+  width: 150px;
+}
+
+.bounce-summary-table th:nth-child(5) {
+  width: 140px;
+}
+
+.bounce-summary-table th:nth-child(6) {
+  width: 180px;
+}
+
+.bounce-summary-table th:nth-child(7) {
+  width: 145px;
+}
+
+.bounce-summary-table th:nth-child(8) {
+  width: 120px;
+}
+
+
+/* ========================================
+   ATTEMPT CELL
+======================================== */
+
+.bounce-summary-attempt {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bounce-summary-attempt strong {
+  font-size: 12px;
+  color: #0f172a;
+}
+
+.bounce-summary-attempt span {
+  font-size: 10px;
+  color: #64748b;
+}
+
+
+/* ========================================
+   BANK CELL
+======================================== */
+
+.bounce-summary-bank {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bounce-summary-bank strong {
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #1e293b;
+}
+
+.bounce-summary-bank span {
+  font-size: 10px;
+  color: #64748b;
+}
+
+
+/* ========================================
+   BOUNCE REASON
+======================================== */
+
+.bounce-summary-reason {
+  white-space: normal;
+}
+
+
+/* ========================================
+   RESULT
+======================================== */
+
+.bounce-summary-result {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bounce-summary-result strong {
+  display: inline-flex;
+
+  width: fit-content;
+
+  padding: 4px 7px;
+
+  border-radius: 999px;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.bounce-summary-result span {
+  font-size: 10px;
+  color: #64748b;
+}
+
+.bounce-summary-result.bounced strong {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.bounce-summary-result.cleared strong {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.bounce-summary-result.pending strong {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.bounce-summary-result.not-reached strong {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+
+/* ========================================
+   NOT REACHED ROW
+======================================== */
+
+.bounce-summary-row-not-reached {
+  background: #fafafa;
+}
+
+.bounce-summary-row-not-reached td {
+  color: #94a3b8;
+}
+
+
+/* ========================================
+   LIFECYCLE SUMMARY
+======================================== */
+
+.bounce-lifecycle-summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  margin-top: 18px;
+  padding: 15px 16px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+
+  background: #f8fafc;
+}
+
+.bounce-lifecycle-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 19px;
+}
+
+.bounce-lifecycle-summary.success {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+}
+
+.bounce-lifecycle-summary.success
+  .bounce-lifecycle-icon {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.bounce-lifecycle-summary.failed {
+  border-color: #fecaca;
+  background: #fef2f2;
+}
+
+.bounce-lifecycle-summary.failed
+  .bounce-lifecycle-icon {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.bounce-lifecycle-summary.pending {
+  border-color: #fed7aa;
+  background: #fff7ed;
+}
+
+.bounce-lifecycle-summary.pending
+  .bounce-lifecycle-icon {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.bounce-lifecycle-content {
+  min-width: 0;
+}
+
+.bounce-lifecycle-content h3 {
+  margin: 0 0 7px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+
+/* ========================================
+   COUNTS
+======================================== */
+
+.bounce-lifecycle-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+
+  margin-bottom: 7px;
+}
+
+.bounce-lifecycle-counts span {
+  padding: 4px 8px;
+
+  border: 1px solid rgba(100, 116, 139, 0.18);
+  border-radius: 6px;
+
+  background: rgba(255, 255, 255, 0.6);
+
+  font-size: 11px;
+  color: #475569;
+}
+
+.bounce-lifecycle-counts strong {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.bounce-lifecycle-content p {
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  color: #475569;
+}
+
+
+/* ========================================
+   LOADING / ERROR
+======================================== */
+
+.bounce-summary-message {
+  padding: 32px;
+
+  text-align: center;
+
+  font-size: 13px;
+  color: #64748b;
+}
+
+.bounce-summary-error {
+  padding: 12px;
+
+  border: 1px solid #fecaca;
+  border-radius: 7px;
+
+  background: #fef2f2;
+  color: #b91c1c;
+
+  font-size: 12px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.bounce-summary-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 11px 22px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.bounce-summary-modal-footer button {
+  padding: 7px 14px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #475569;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.bounce-summary-modal-footer button:hover {
+  background: #f8fafc;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 700px) {
+  .bounce-summary-overlay {
+    padding: 10px;
+  }
+
+  .bounce-summary-modal {
+    width: 98vw;
+    max-height: 95vh;
+  }
+
+  .bounce-summary-cheque-info {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}

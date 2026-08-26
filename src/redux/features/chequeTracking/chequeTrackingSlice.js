@@ -10,7 +10,8 @@ import {
   getChequeBounceCyclesApi,
   recordReturnedChequeReceiptApi,
   recordChequeRedepositApi ,
-  addChequeNoteApi
+  addChequeNoteApi,
+  recordChequeClearanceApi
 } from "./chequeTrackingApi";
 
 // ========================================
@@ -235,6 +236,32 @@ export const addChequeNote = createAsyncThunk(
 );
 
 // ========================================
+// RECORD CHEQUE CLEARANCE
+// ========================================
+
+export const recordChequeClearance = createAsyncThunk(
+  "chequeTracking/recordChequeClearance",
+
+  async (
+    { chequeId, clearanceData },
+    { rejectWithValue }
+  ) => {
+    try {
+      const response = await recordChequeClearanceApi(
+        chequeId,
+        clearanceData
+      );
+
+      return response;
+    } catch (error) {
+      return rejectWithValue(
+        error.response?.data?.message ||
+          "Failed to record cheque clearance"
+      );
+    }
+  }
+);
+// ========================================
 // INITIAL STATE
 // ========================================
 
@@ -268,6 +295,8 @@ const initialState = {
 redepositError: null,
 noteLoading: false,
 noteError: null,
+clearanceLoading: false,
+clearanceError: null,
 };
 
 // ========================================
@@ -576,6 +605,40 @@ const chequeTrackingSlice = createSlice({
   state.noteError = action.payload;
 })
 
+
+// ====================================
+// RECORD CHEQUE CLEARANCE
+// ====================================
+
+.addCase(recordChequeClearance.pending, (state) => {
+  state.clearanceLoading = true;
+  state.clearanceError = null;
+})
+
+.addCase(recordChequeClearance.fulfilled, (state, action) => {
+  state.clearanceLoading = false;
+
+  const updatedCheque =
+    action.payload.data?.cheque;
+
+  const newActivity =
+    action.payload.data?.clearanceActivity;
+
+  // Update main cheque
+  if (updatedCheque) {
+    state.individualCheque = updatedCheque;
+  }
+
+  // Add clearance activity to workflow
+  if (newActivity) {
+    state.workflowActivities.push(newActivity);
+  }
+})
+
+.addCase(recordChequeClearance.rejected, (state, action) => {
+  state.clearanceLoading = false;
+  state.clearanceError = action.payload;
+})
   },
 });
 

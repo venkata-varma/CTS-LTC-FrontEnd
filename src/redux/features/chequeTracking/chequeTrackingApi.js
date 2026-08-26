@@ -158,3 +158,19 @@ export const addChequeNoteApi = async (
 
   return response.data;
 };
+
+// ========================================
+// RECORD CHEQUE CLEARANCE
+// ========================================
+
+export const recordChequeClearanceApi = async (
+  chequeId,
+  clearanceData
+) => {
+  const response = await axiosInstance.patch(
+    `/cheque/record-clearance/${chequeId}`,
+    clearanceData
+  );
+
+  return response.data;
+};

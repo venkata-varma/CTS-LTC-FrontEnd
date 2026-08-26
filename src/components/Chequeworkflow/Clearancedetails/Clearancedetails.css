@@ -1,0 +1,393 @@
+.clearance-details-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.clearance-details-card h3 {
+  margin: 0 0 16px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #172033;
+}
+
+
+/* ========================================
+   NOT CLEARED
+======================================== */
+
+.clearance-empty-state {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px;
+  margin-bottom: 14px;
+
+  border: 1px solid #dbe5f1;
+  border-radius: 8px;
+
+  background: #f8fafc;
+}
+
+.clearance-empty-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  background: #eef3f8;
+  color: #64748b;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.clearance-empty-state div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.clearance-empty-state span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.clearance-empty-state strong {
+  font-size: 14px;
+  color: #1e293b;
+}
+
+
+/* ========================================
+   RECORD CLEARANCE BUTTON
+======================================== */
+
+.record-clearance-button {
+  width: 100%;
+  min-height: 38px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.record-clearance-button:hover {
+  background: #1d4ed8;
+}
+
+
+/* ========================================
+   CLEARED SUMMARY
+======================================== */
+
+.clearance-success-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px;
+
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+
+  background: #f0fdf4;
+}
+
+.clearance-success-icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #dcfce7;
+  color: #16a34a;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.clearance-success-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  min-width: 0;
+}
+
+.clearance-success-label {
+  font-size: 12px;
+  color: #15803d;
+}
+
+.clearance-success-amount {
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #166534;
+}
+
+.clearance-success-date {
+  margin-left: auto;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #166534;
+
+  white-space: nowrap;
+}
+
+
+/* ========================================
+   VIEW DETAILS BUTTON
+======================================== */
+
+.view-clearance-details-button {
+  width: 100%;
+
+  margin-top: 25px;
+  padding: 8px 10px;
+
+  border: 1px solid #bfdbfe;
+  border-radius: 7px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.view-clearance-details-button:hover {
+  background: #49698d;
+  color:white;
+}
+
+
+/* ========================================
+   READ-ONLY DETAILS POPUP
+======================================== */
+
+.clearance-details-preview-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 1100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.48);
+}
+
+.clearance-details-preview {
+  width: 100%;
+  max-width: 520px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 20px 50px
+    rgba(15, 23, 42, 0.2);
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   POPUP HEADER
+======================================== */
+
+.clearance-details-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 17px 20px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.clearance-details-preview-header h3 {
+  margin: 0;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+.clearance-details-preview-header button {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #f1f5f9;
+  color: #475569;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+
+/* ========================================
+   POPUP DETAILS
+======================================== */
+
+.clearance-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+
+  padding: 18px 20px;
+}
+
+.clearance-preview-grid > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  min-width: 0;
+}
+
+.clearance-preview-grid span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.clearance-preview-grid strong {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #1e293b;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+   POPUP NOTES
+======================================== */
+
+.clearance-preview-notes {
+  margin: 0 20px 18px;
+
+  padding: 12px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+
+  background: #f8fafc;
+}
+
+.clearance-preview-notes span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 12px;
+  color: #64748b;
+}
+
+.clearance-preview-notes p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #334155;
+}
+
+
+/* ========================================
+   POPUP FOOTER
+======================================== */
+
+.clearance-preview-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 12px 20px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.clearance-preview-footer button {
+  padding: 7px 13px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #475569;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.clearance-preview-footer button:hover {
+  background: #f8fafc;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+  .clearance-success-box {
+    align-items: flex-start;
+  }
+
+  .clearance-success-date {
+    white-space: normal;
+    text-align: right;
+  }
+
+  .clearance-preview-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -19,6 +19,7 @@ import Returnedchequereceiptmodal from "./Returnedchequereceiptmodal.jsx";
 import Recordredepositmodal from "./Recordredepositmodal.jsx";
 import Addnotemodal from "./Addnotemodal.jsx";
 import Noteshistorymodal from "./Noteshistorymodal";
+import Bounceredepositsummarymodal from "./Bounceredepositsummarymodal.jsx";
 import "./Bouncedetails.css";
 
 const Bouncedetails = () => {
@@ -47,6 +48,7 @@ const Bouncedetails = () => {
   const [presentPlaceError, setPresentPlaceError] = useState("");
   const [showAddNoteModal, setShowAddNoteModal] = useState(false);
   const [showNotesHistoryModal, setShowNotesHistoryModal] = useState(false);
+  const [showBounceSummaryModal, setShowBounceSummaryModal] = useState(false);
 
   const handleEditPresentPlace = () => {
     setPresentPlaceValue(currentPresentPlace);
@@ -179,7 +181,11 @@ const Bouncedetails = () => {
         </div>
 
         {/* Summary */}
-        <button type="button" className="bounce-summary-button">
+        <button
+          type="button"
+          className="bounce-summary-button"
+          onClick={() => setShowBounceSummaryModal(true)}
+        >
           <FiEye />
           View Bounce &amp; Redeposit Summary
         </button>
@@ -282,12 +288,27 @@ const Bouncedetails = () => {
       )}
 
       {showNotesHistoryModal && (
-  <Noteshistorymodal
-    cheque={individualCheque}
-    notes={noteActivities}
-    onClose={() => setShowNotesHistoryModal(false)}
-  />
-)}
+        <Noteshistorymodal
+          cheque={individualCheque}
+          notes={noteActivities}
+          onClose={() => setShowNotesHistoryModal(false)}
+        />
+      )}
+
+      {showBounceSummaryModal &&
+  individualCheque && (
+    <Bounceredepositsummarymodal
+      cheque={individualCheque}
+      workflowActivities={
+        workflowActivities
+      }
+      onClose={() =>
+        setShowBounceSummaryModal(
+          false
+        )
+      }
+    />
+  )}
     </>
   );
 };
