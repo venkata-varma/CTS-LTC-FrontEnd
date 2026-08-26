@@ -8,7 +8,7 @@ import "./Chequeworkflow.css";
 import Workflowactivity from "../../components/Chequeworkflow/Workflowactivity";
 import Rescheduledetails from "../../components/Chequeworkflow/Rescheduledetails/Rescheduledetails";
 import Submissiondetails from "../../components/Chequeworkflow/Submissiondetails/Submissiondetails";
-
+import Bouncedetails from "../../components/Chequeworkflow/Bouncedetails/Bouncedetails";
 
 function Chequeworkflow() {
   const { chequeId } = useParams();
@@ -203,9 +203,7 @@ return (
 
   <div className="workflow-side-column">
 
-    <div className="workflow-section-card">
-      <h3>Bounce / Return details</h3>
-    </div>
+<Bouncedetails />
 
     <div className="workflow-section-card">
       <h3>Clearance details</h3>

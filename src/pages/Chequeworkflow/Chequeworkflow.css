@@ -169,37 +169,49 @@
   display: grid;
   grid-template-columns: 1fr 1.7fr 1fr;
   gap: 20px;
-
-  height: 560px;
-
   margin-top: 24px;
-
-  align-items: stretch;
+  align-items: start;
 }
-
 .workflow-side-column {
   display: flex;
   flex-direction: column;
-
   gap: 20px;
+  /*
+    Same comfortable starting height as Workflow Activities,
+    but NOT a fixed height.
+  */
+  min-height: 650px;
 
-  min-height: 0;
+  min-width: 0;
 }
 
-.workflow-side-column > * {
+/* .workflow-side-column > * {
   flex: 1;
   min-height: 0;
 }
+
+.workflow-side-column > .workflow-section-card {
+  flex: 1 1 auto;
+} */
+.workflow-side-column > * {
+  flex: 1 1 0;
+}
+
 .workflow-section-card,
 .workflow-activity-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 14px;
   box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  box-sizing: border-box;
 }
+/*
+  Side cards:
+  natural content decides their height.
+  No fixed/minimum height forced globally.
+*/
 
 .workflow-section-card {
-  min-height: 190px;
   padding: 20px;
 }
 
@@ -208,12 +220,16 @@
   font-size: 17px;
 }
 
+/* Middle section remains intentionally tall and scrollable */
 .workflow-activity-card {
-  height: 100%;
+  height: 650px;
+  min-height: 650px;
+
   display: flex;
   flex-direction: column;
-  min-height: 0;
+
   padding: 22px;
+
   overflow: hidden;
 }
 
