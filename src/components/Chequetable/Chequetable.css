@@ -305,3 +305,42 @@
 .clickable-cheque-row {
   cursor: pointer;
 }
+
+.lifecycle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  padding: 7px 10px;
+
+  border: 1px solid #c4b5fd;
+  border-radius: 7px;
+
+  background: #ede9fe;
+  color: #6d28d9;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.lifecycle-btn svg {
+  font-size: 13px;
+  color: #7c3aed;
+}
+
+.lifecycle-btn:hover {
+  background: #ddd6fe;
+  border-color: #a78bfa;
+  color: #5b21b6;
+}

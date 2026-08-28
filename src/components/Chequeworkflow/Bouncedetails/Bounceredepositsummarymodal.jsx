@@ -513,6 +513,69 @@ function Bounceredepositsummarymodal({
           {!bounceCyclesLoading &&
             !bounceCyclesError && (
               <>
+                 {/* ==========================
+                    LIFECYCLE SUMMARY
+                ========================== */}
+
+                <div
+                  className={`bounce-lifecycle-summary ${lifecycleSummary.type}`}
+                >
+                  <div className="bounce-lifecycle-icon">
+                    <SummaryIcon />
+                  </div>
+
+                  <div className="bounce-lifecycle-content">
+                    <h3>
+                      {
+                        lifecycleSummary.title
+                      }
+                    </h3>
+
+                    <div className="bounce-lifecycle-counts">
+                      <span>
+                        <strong>
+                          {
+                            lifecycleCounts.depositCount
+                          }
+                        </strong>{" "}
+                        {lifecycleCounts.depositCount ===
+                        1
+                          ? "Deposit"
+                          : "Deposits"}
+                      </span>
+
+                      <span>
+                        <strong>
+                          {
+                            lifecycleCounts.bounceCount
+                          }
+                        </strong>{" "}
+                        {lifecycleCounts.bounceCount ===
+                        1
+                          ? "Bounce"
+                          : "Bounces"}
+                      </span>
+
+                      <span>
+                        <strong>
+                          {
+                            lifecycleCounts.returnCount
+                          }
+                        </strong>{" "}
+                        {lifecycleCounts.returnCount ===
+                        1
+                          ? "Return to Office"
+                          : "Returns to Office"}
+                      </span>
+                    </div>
+
+                    <p>
+                      {
+                        lifecycleSummary.description
+                      }
+                    </p>
+                  </div>
+                </div>
                 {/* ==========================
                     TABLE
                 ========================== */}
@@ -699,69 +762,7 @@ function Bounceredepositsummarymodal({
                   </table>
                 </div>
 
-                {/* ==========================
-                    LIFECYCLE SUMMARY
-                ========================== */}
-
-                <div
-                  className={`bounce-lifecycle-summary ${lifecycleSummary.type}`}
-                >
-                  <div className="bounce-lifecycle-icon">
-                    <SummaryIcon />
-                  </div>
-
-                  <div className="bounce-lifecycle-content">
-                    <h3>
-                      {
-                        lifecycleSummary.title
-                      }
-                    </h3>
-
-                    <div className="bounce-lifecycle-counts">
-                      <span>
-                        <strong>
-                          {
-                            lifecycleCounts.depositCount
-                          }
-                        </strong>{" "}
-                        {lifecycleCounts.depositCount ===
-                        1
-                          ? "Deposit"
-                          : "Deposits"}
-                      </span>
-
-                      <span>
-                        <strong>
-                          {
-                            lifecycleCounts.bounceCount
-                          }
-                        </strong>{" "}
-                        {lifecycleCounts.bounceCount ===
-                        1
-                          ? "Bounce"
-                          : "Bounces"}
-                      </span>
-
-                      <span>
-                        <strong>
-                          {
-                            lifecycleCounts.returnCount
-                          }
-                        </strong>{" "}
-                        {lifecycleCounts.returnCount ===
-                        1
-                          ? "Return to Office"
-                          : "Returns to Office"}
-                      </span>
-                    </div>
-
-                    <p>
-                      {
-                        lifecycleSummary.description
-                      }
-                    </p>
-                  </div>
-                </div>
+             
               </>
             )}
         </div>

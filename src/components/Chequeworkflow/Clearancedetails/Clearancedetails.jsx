@@ -1,17 +1,14 @@
 import { useState } from "react";
-
+import Recordclearancemodal from "./Recordclearancemodal";
 import "./Clearancedetails.css";
 
 function Clearancedetails({ cheque }) {
-  const [showClearanceDetails, setShowClearanceDetails] =
+  const [showClearanceDetails, setShowClearanceDetails] = useState(false);
+  const [showRecordClearanceModal, setShowRecordClearanceModal] =
     useState(false);
+  const isCleared = cheque?.status === "cleared" && cheque?.chequeClearanceDate;
 
-  const isCleared =
-    cheque?.status === "cleared" &&
-    cheque?.chequeClearanceDate;
-
-  const clearanceDetails =
-    cheque?.clearanceDetails || {};
+  const clearanceDetails = cheque?.clearanceDetails || {};
 
   const formatDateTime = (date) => {
     if (!date) return "—";
@@ -34,9 +31,7 @@ function Clearancedetails({ cheque }) {
         {!isCleared ? (
           <>
             <div className="clearance-empty-state">
-              <div className="clearance-empty-icon">
-                ✓
-              </div>
+              <div className="clearance-empty-icon">✓</div>
 
               <div>
                 <span>Clearance Status</span>
@@ -47,6 +42,7 @@ function Clearancedetails({ cheque }) {
             <button
               type="button"
               className="record-clearance-button"
+              onClick={() => setShowRecordClearanceModal(true)}
             >
               Record Clearance
             </button>
@@ -56,14 +52,10 @@ function Clearancedetails({ cheque }) {
             {/* CLEARED SUMMARY */}
 
             <div className="clearance-success-box">
-              <span className="clearance-success-icon">
-                ✓
-              </span>
+              <span className="clearance-success-icon">✓</span>
 
               <div className="clearance-success-content">
-                <span className="clearance-success-label">
-                  Cheque Cleared
-                </span>
+                <span className="clearance-success-label">Cheque Cleared</span>
 
                 <strong className="clearance-success-amount">
                   {cheque.amountDetails?.currency || "INR"}{" "}
@@ -72,9 +64,7 @@ function Clearancedetails({ cheque }) {
               </div>
 
               <strong className="clearance-success-date">
-                {formatDateTime(
-                  cheque.chequeClearanceDate
-                )}
+                {formatDateTime(cheque.chequeClearanceDate)}
               </strong>
             </div>
 
@@ -83,9 +73,7 @@ function Clearancedetails({ cheque }) {
             <button
               type="button"
               className="view-clearance-details-button"
-              onClick={() =>
-                setShowClearanceDetails(true)
-              }
+              onClick={() => setShowClearanceDetails(true)}
             >
               View Clearance Details
             </button>
@@ -98,24 +86,18 @@ function Clearancedetails({ cheque }) {
       {showClearanceDetails && (
         <div
           className="clearance-details-preview-overlay"
-          onClick={() =>
-            setShowClearanceDetails(false)
-          }
+          onClick={() => setShowClearanceDetails(false)}
         >
           <div
             className="clearance-details-preview"
-            onClick={(event) =>
-              event.stopPropagation()
-            }
+            onClick={(event) => event.stopPropagation()}
           >
             <div className="clearance-details-preview-header">
               <h3>Clearance Details</h3>
 
               <button
                 type="button"
-                onClick={() =>
-                  setShowClearanceDetails(false)
-                }
+                onClick={() => setShowClearanceDetails(false)}
               >
                 ×
               </button>
@@ -134,25 +116,19 @@ function Clearancedetails({ cheque }) {
               <div>
                 <span>Bank Name</span>
 
-                <strong>
-                  {clearanceDetails.bankName || "—"}
-                </strong>
+                <strong>{clearanceDetails.bankName || "—"}</strong>
               </div>
 
               <div>
                 <span>Bank Branch</span>
 
-                <strong>
-                  {clearanceDetails.bankBranch || "—"}
-                </strong>
+                <strong>{clearanceDetails.bankBranch || "—"}</strong>
               </div>
 
               <div>
                 <span>Account Number</span>
 
-                <strong>
-                  {clearanceDetails.accountNumber || "—"}
-                </strong>
+                <strong>{clearanceDetails.accountNumber || "—"}</strong>
               </div>
             </div>
 
@@ -160,24 +136,26 @@ function Clearancedetails({ cheque }) {
               <div className="clearance-preview-notes">
                 <span>Clearance Notes</span>
 
-                <p>
-                  {clearanceDetails.clearanceNotes}
-                </p>
+                <p>{clearanceDetails.clearanceNotes}</p>
               </div>
             )}
 
             <div className="clearance-preview-footer">
               <button
                 type="button"
-                onClick={() =>
-                  setShowClearanceDetails(false)
-                }
+                onClick={() => setShowClearanceDetails(false)}
               >
                 Close
               </button>
             </div>
           </div>
         </div>
+      )}
+      {showRecordClearanceModal && (
+        <Recordclearancemodal
+          cheque={cheque}
+          onClose={() => setShowRecordClearanceModal(false)}
+        />
       )}
     </>
   );
